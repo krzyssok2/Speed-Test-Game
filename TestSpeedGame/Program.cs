@@ -77,8 +77,9 @@ namespace TestSpeedGame
                 for(int j=0;j<userWords[i].Length;j++)
                 {
                     if (words[i][j] != userWords[i][j]) errors++;
+                    if (words[i].Length - 1 == j) break;
                 }
-                errors += (words[i].Length - userWords[i].Count());
+                errors += Math.Abs(words[i].Length - userWords[i].Count());
             }
 
             double NetWpm= ((numberOfChar / 5) -errors)/ stopWatch.Elapsed.TotalMinutes;
