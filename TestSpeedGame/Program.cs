@@ -9,7 +9,10 @@ namespace TestSpeedGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Press any key to start the game!");
+            Console.WriteLine("Welcome to typing speed test!");
+            Console.WriteLine("You will be given words to type, make sure you type them correctly");
+            Console.WriteLine("Pressing space after a word will shift sentence and save your word");
+            Console.WriteLine("Press any button to start!");
             Console.ReadKey();
             string[] words = new string[]
             { 
@@ -87,7 +90,7 @@ namespace TestSpeedGame
             if (NetWpm < 0) NetWpm = 0;
             Console.WriteLine("Words per minute: " + NetWpm);
             Console.WriteLine("Correct words: " + correctWords);
-            Console.WriteLine("wrong words: " + wrongWords);
+            Console.WriteLine("Mistake count: " + errors);
             Console.WriteLine("Elapsed time: " + stopWatch.Elapsed.TotalSeconds);
             Console.WriteLine("errors: " + errors);
 
