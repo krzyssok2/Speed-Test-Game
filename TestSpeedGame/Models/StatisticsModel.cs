@@ -11,12 +11,13 @@ namespace TestSpeedGame.Models
         private int ErrorCount = 0;
         private int CorrectWords = 0;
         private int NumberOfChars = 0;
-        public StatisticsModel(GivenWordsModel words, PlayerModel player)
+        public StatisticsModel(GivenWordsModel words, PlayerModel player, double time)
         {
             GameCalculator gameCalculator = new GameCalculator();
             CorrectWords = gameCalculator.CalculateCorrectWords(words.GetWords(), player.GetPlayerWords());
             ErrorCount = gameCalculator.CalculateErrors(words.GetWords(), player.GetPlayerWords());
-            NetWpm = gameCalculator.CalculateNumberOfChars(words.GetWords());
+            NumberOfChars = gameCalculator.CalculateNumberOfChars(words.GetWords());
+            NetWpm = gameCalculator.CalculateNetWpm(NumberOfChars, ErrorCount, time);
         }
 
         public double GetNetWpm()

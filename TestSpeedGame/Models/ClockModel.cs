@@ -7,22 +7,22 @@ namespace TestSpeedGame.Models
 {
     class ClockModel
     {
-        private Stopwatch stopWatch = new Stopwatch();
+        private Stopwatch StopWatch = new Stopwatch();
         public void StartClock()
         {
-            stopWatch.Start();
+            StopWatch.Start();
         }
         public void StopClock()
         {
-            stopWatch.Stop();
+            StopWatch.Stop();
         }
         public double GetTimeInSeconds()
         {
-            return stopWatch.Elapsed.TotalSeconds;
+            return StopWatch.Elapsed.TotalSeconds;
         }
         public double GetTimeInMinutes()
         {
-            return stopWatch.Elapsed.TotalMinutes;
+            return StopWatch.Elapsed.TotalMinutes;
         }
     }
 }

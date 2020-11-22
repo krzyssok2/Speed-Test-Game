@@ -35,7 +35,7 @@ namespace TestSpeedGame
             }
             clock.StopClock();
 
-            StatisticsModel statistics = new StatisticsModel(givenWords, player);
+            StatisticsModel statistics = new StatisticsModel(givenWords, player, clock.GetTimeInMinutes());
 
             renderer.RenderEndGame(statistics, clock.GetTimeInSeconds());
             Console.ReadKey();

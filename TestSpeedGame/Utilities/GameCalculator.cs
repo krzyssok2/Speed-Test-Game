@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TestSpeedGame.Utilities
 {
-    class GameCalculator
+    public class GameCalculator
     {
         public int CalculateCorrectWords(string[] words, List<string> PlayerWords)
         {
