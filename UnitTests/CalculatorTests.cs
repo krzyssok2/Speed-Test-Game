@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using TestSpeedGame.Utilities;
 using Xunit;
+
 namespace UnitTests
 {
     public class CalculatorTests
@@ -51,7 +52,7 @@ namespace UnitTests
             };
 
             //Act
-            int actualValue = gameCalculator.CalculateWrongsWords(words,words2);
+            int actualValue = gameCalculator.CalculateWrongsWords(words, words2);
             //Assert
             Assert.AreEqual(expectedValue, actualValue);
         }
